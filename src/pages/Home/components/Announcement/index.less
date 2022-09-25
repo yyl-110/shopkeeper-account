@@ -1,0 +1,58 @@
+.announcement {
+  background: #fff;
+  padding: 24px;
+  margin-bottom: 24px;
+  border-radius: 4px;
+  padding-bottom: 16px;
+  width: 100%;
+
+  .homeNotice {
+    position: relative;
+    padding: 0;
+    height: 144px;
+
+    .header {
+      height: 20px;
+      line-height: 20px;
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        color: rgb(102, 102, 102);
+      }
+
+      .annBtn {
+        font-size: 14px;
+        padding: 0 4px;
+        border-radius: 4px;
+        line-height: 20px;
+        font-weight: 600;
+        color: #fff;
+        background-color: #3d89ff;
+      }
+    }
+
+    .content {
+      width: 100%;
+
+      .item {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 40px;
+
+        span {
+          flex-shrink: 0;
+          width: 50px;
+        }
+
+        .text {
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          color: #222;
+        }
+      }
+    }
+  }
+}

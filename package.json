@@ -1,0 +1,79 @@
+{
+  "name": "headline",
+  "description": "今日头条",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "cross-env PORT=8806 umi dev",
+    "start:no-mock": "cross-env PORT=8807 MOCK=none umi dev",
+    "start:dev": "cross-env PORT=8808 UMI_ENV=dev umi dev",
+    "start:staging": "cross-env PORT=8809 UMI_ENV=staging umi dev",
+    "start:prod": "cross-env PORT=8810 UMI_ENV=prod umi dev",
+    "build:dev": "cross-env UMI_ENV=dev umi build",
+    "build:staging": "cross-env UMI_ENV=staging umi build",
+    "build:prod": "cross-env UMI_ENV=prod umi build",
+    "postinstall": "umi generate tmp",
+    "lint": "npm run lint:js && npm run lint:style && npm run lint:prettier",
+    "lint-staged": "lint-staged",
+    "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx ",
+    "lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src && npm run lint:style",
+    "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
+    "lint:prettier": "prettier --check \"**/*.{js,jsx,tsx,ts,less,md,json}\" --end-of-line auto",
+    "lint:style": "stylelint --fix \"src/**/*.less\" --syntax less",
+    "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage",
+    "git-commit": "yarn lancet-commit",
+    "pre-commit": "run-s prettier lint lint:fix",
+    "commit": "run-s prettier lint git-commit"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.6.2",
+    "@ant-design/pro-layout": "^6.16.0",
+    "@umijs/preset-react": "^1.8.3",
+    "ali-oss": "^6.15.2",
+    "antd": "^4.15.0",
+    "braft-editor": "^2.3.9",
+    "braft-utils": "^3.0.12",
+    "dayjs": "^1.10.4",
+    "jsencrypt": "^3.1.0",
+    "lrz": "^4.9.41",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-viewer": "^3.2.2",
+    "umi": "^3.2.14",
+    "umi-plugin-keep-alive": "^0.0.1-beta.16",
+    "umi-request": "^1.3.5",
+    "xlsx": "^0.16.9"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.0.1",
+    "@commitlint/config-conventional": "^12.0.1",
+    "@types/react": "^17.0.2",
+    "@umijs/plugin-esbuild": "^1.4.1",
+    "@umijs/test": "^3.4.7",
+    "cross-env": "^7.0.3",
+    "husky": "^4.2.5",
+    "lint-staged": "^13.0.3",
+    "mockjs": "^1.1.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.19.1",
+    "typescript": "4.1.5",
+    "yorkie": "^2.0.0"
+  }
+}

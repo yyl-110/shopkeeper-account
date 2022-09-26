@@ -3,18 +3,13 @@ import { connect, Dispatch, Loading, history } from 'umi';
 import styles from './index.less';
 import { RightOutlined } from '@ant-design/icons';
 import { Row, Col } from 'antd';
+import Header from '../Header/index';
 
 interface IProps {}
 const Inspiration: React.FC<IProps> = props => {
   return (
     <div className={styles.inspiration}>
-      <div className={styles.header}>
-        <span className={styles.homeTitle}>创作灵感</span>
-        <a className={styles.more} href="/profile_v4/activity/hot-spot">
-          更多
-          <RightOutlined style={{ marginLeft: '4px' }} />
-        </a>
-      </div>
+      <Header title="物业观察" url="/login" />
       <div className={styles.list}>
         <Row>
           <Col xs={12} lg={24}>

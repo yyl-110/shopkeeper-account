@@ -1,0 +1,180 @@
+.recommended {
+  width: 100%;
+  margin: 0 auto;
+  min-width: 768px;
+  overflow-y: auto;
+  background-color: #f8f8f8;
+
+  .wendaHome {
+    margin: 32px auto 24px;
+    width: 816px;
+
+    .homeWrap {
+      padding: 18px 48px 60px;
+      width: 100%;
+      background-color: #fff;
+      min-height: 600px;
+    }
+
+    .tabWrap {
+      display: flex;
+      // align-items: center;
+      justify-content: space-between;
+
+      .search {
+        display: flex;
+        align-items: center;
+        height: 46px;
+
+        :global {
+          .ant-btn {
+            margin-left: 24px;
+            border-radius: 4px;
+          }
+
+          .ant-input-affix-wrapper {
+            border-radius: 6px;
+          }
+
+          .ant-input {
+            &::placeholder {
+              color: #c1c1c1;
+              font-weight: 400;
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+
+    :global {
+      .ant-tabs-nav {
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .commonMore {
+    border-top: 1px solid #e8e8e8;
+
+    .item {
+      padding: 24px 0;
+      border-bottom: 1px solid #e8e8e8;
+      display: flex;
+      flex-direction: column;
+
+      .top {
+        .title {
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 1.5;
+          cursor: pointer;
+          color: #222;
+        }
+
+        .descMore {
+          font-size: 14px;
+          line-height: 24px;
+          color: #666;
+          margin-top: 8px;
+          margin-bottom: 12px;
+        }
+      }
+
+      .bottom {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 16px;
+        line-height: 28px;
+        font-size: 14px;
+
+        .data {
+          color: #666;
+        }
+
+        .option {
+          >span {
+            &:hover {
+              color: #666;
+            }
+
+            &:first-child {
+              margin-right: 24px;
+            }
+
+            padding: 0 8px 0 6px;
+            cursor: pointer;
+            color: #222;
+          }
+        }
+      }
+    }
+  }
+
+  .queTagList {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 32px;
+    padding-bottom: 8px;
+    width: 100%;
+
+    .list {
+      display: inline-flex;
+      flex-wrap: wrap;
+
+      .inputWrap {
+        margin-bottom: 24px;
+        padding: 0 8px;
+        font-size: 12px;
+        height: 24px;
+        line-height: 22px;
+      }
+
+      .add {
+        margin-bottom: 24px;
+        padding: 0 8px;
+        font-size: 12px;
+        height: 24px;
+        line-height: 22px;
+        display: inline-block;
+        position: relative;
+        outline: none;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: all .3s;
+        box-sizing: border-box;
+        border: 1px dashed rgb(216, 216, 216);
+        border-radius: 4px;
+        color: rgb(216, 216, 216);
+
+        &:hover {
+          color: #222;
+          border-color: #222;
+        }
+      }
+
+      .tagItem {
+        display: inline-block;
+        padding: 2px 8px;
+        position: relative;
+        margin-right: 12px;
+        margin-bottom: 16px;
+        border-radius: 2px;
+        border: 1px solid #d8d8d8;
+        color: #666;
+        font-size: 12px;
+        line-height: 18px;
+        height: 24px;
+        cursor: pointer;
+
+        &.selectItem {
+          color: @red;
+          border-color: @red;
+        }
+      }
+    }
+  }
+}

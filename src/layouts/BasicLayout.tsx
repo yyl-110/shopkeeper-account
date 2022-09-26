@@ -7,6 +7,7 @@ interface IProps {
 }
 
 const BasicLayout: React.FC<IProps> = ({ children, dispatch }) => {
+
   return <>{children}</>;
 };
 

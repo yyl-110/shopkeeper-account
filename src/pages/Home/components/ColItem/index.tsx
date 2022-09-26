@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { connect, Dispatch, Loading, history } from 'umi';
 import styles from './index.less';
 import { Row, Col } from 'antd';
+import { ArrowUpOutlined } from '@ant-design/icons';
+import ArticleStep from '../ArticleStep/index';
 
 interface IProps {}
 const ColItem: React.FC<IProps> = props => {
@@ -40,16 +42,17 @@ const ColItem: React.FC<IProps> = props => {
                   width="1em"
                   height="1em"
                   fill="currentColor"
-                  tabindex="0"
                 >
                   <path d="M512 42.688a469.312 469.312 0 110 938.624 469.312 469.312 0 010-938.624zM512 128a384 384 0 100 768 384 384 0 000-768zm21.312 554.688c11.776 0 21.376 9.536 21.376 21.312v42.688c0 11.776-9.6 21.312-21.376 21.312h-42.624a21.312 21.312 0 01-21.376-21.312V704c0-11.776 9.6-21.312 21.376-21.312h42.624zM505.92 256c50.752 0 92.864 12.288 126.4 36.864 33.6 24.576 50.368 60.928 50.368 109.184 0 29.568-7.296 54.4-21.888 74.688-7.296 10.56-20.416 23.552-39.232 39.104l-33.856 26.752c-12.992 10.24-21.632 22.144-25.92 35.84a115.456 115.456 0 00-3.008 20.736 21.312 21.312 0 01-21.248 19.52h-47.808a21.312 21.312 0 01-21.312-21.376l.064-1.92c2.752-29.696 5.76-48.512 8.832-56.384 5.824-14.72 20.864-31.552 45.12-50.688l24.576-19.456c8.064-6.144 49.728-35.456 49.728-61.44 0-25.92-4.48-35.456-17.6-49.664-12.992-14.272-42.368-18.88-68.8-18.88-26.048 0-48.32 6.912-59.2 24.448a123.328 123.328 0 00-12.16 25.6l-2.112 8.128-.96 4.992a21.312 21.312 0 01-20.992 17.728h-50.24a21.312 21.312 0 01-21.376-21.376l.192-2.368 1.088-8.512.576-3.392c8.32-46.336 29.376-80.384 63.168-102.208 26.496-17.28 59.008-25.92 97.6-25.92z"></path>
                 </svg>
               </span>
               <div className={styles.primary}>
-                <a href="/profile_v4/analysis/fans/overview">0</a>
+                <a href="/profile_v4/analysis/fans/overview">7,270</a>
               </div>
               <div className={styles.secondary}>
-                <p className="second-title no-change second-title">昨日无变化</p>
+                <p className="second-title no-change second-title">
+                  昨日 4<ArrowUpOutlined style={{ color: '#ff5e5e', fontWeight: 'bold' }} />
+                </p>
               </div>
             </div>
           </div>
@@ -146,6 +149,8 @@ const ColItem: React.FC<IProps> = props => {
           </div>
         </Col>
       </Row>
+      {/* 文章 */}
+      <ArticleStep />
     </div>
   );
 };

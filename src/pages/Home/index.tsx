@@ -22,7 +22,7 @@ const Home: React.FC<IProps> = props => {
         <Col xs={24} lg={16} style={{ padding: '0 12px' }}>
           <ColItem />
           <Active />
-          <Course />
+          {/* <Course /> */}
         </Col>
         <Col xs={24} lg={8} style={{ padding: '0 12px' }}>
           <Announcement />

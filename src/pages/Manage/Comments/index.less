@@ -1,0 +1,171 @@
+.comment {
+  min-width: 765px;
+  background-color: #fff;
+  max-height: 800px;
+  min-height: 800px;
+  overflow: hidden;
+
+  .tabWrap {
+    padding-top: 24px;
+    padding-left: 32px;
+  }
+
+  .commentContent {
+    display: flex;
+
+    .commentList {
+      flex: 1;
+      overflow-y: scroll;
+      height: 800px;
+      padding-bottom: 60px;
+    }
+
+    .item {
+      width: 100%;
+      padding-left: 0;
+      padding-left: 48px;
+      position: relative;
+
+      padding: 14px 14px 14px 48px;
+
+      .itemWrap {
+        border-bottom: 1px solid #e8e8e8;
+        padding-bottom: 20px;
+
+
+      }
+
+      &.select {
+        &::after {
+          content: '';
+          background-color: rgba(0, 0, 0, .1);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 9;
+        }
+
+        &::before {
+          content: '';
+          background-color: @red;
+          width: 4px;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 10;
+        }
+
+      }
+
+
+      .commentName {
+        display: flex;
+        color: #666;
+        font-size: 12px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: flex;
+        align-content: center;
+        line-height: 30px;
+
+        img {
+          width: 30px;
+          height: 30px;
+          margin-right: 10px;
+          flex-shrink: 0;
+        }
+      }
+
+      .text {
+        padding: 14px 0;
+        font-size: 13px;
+        color: #222;
+        margin: 0;
+      }
+
+      .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+
+        .time {
+          color: #999;
+          font-size: 12px;
+          flex-shrink: 0;
+        }
+
+        .options {
+          display: flex;
+          align-items: center;
+          flex-wrap: nowrap;
+
+          span {
+            color: #222;
+            margin-left: 20px;
+            flex-shrink: 0;
+
+            &:hover {
+              color: #666;
+            }
+          }
+
+        }
+      }
+    }
+
+    .commentInfo {
+      flex: 1;
+      padding-right: 24px;
+
+      .textarea {
+        padding-left: 48px;
+        position: relative;
+
+        .btn {
+          position: absolute;
+          right: 12px;
+          bottom: 12px;
+        }
+
+        .ant-input {
+          border-radius: 4px !important;
+
+          &::placeholder {
+            color: #999;
+          }
+        }
+      }
+
+      .item {
+        .itemWrap {
+          border: none;
+        }
+      }
+    }
+
+    .reply {
+      margin-top: 24px;
+      padding-left: 48px;
+      h2 {
+        color: #222;
+        font-weight: bold;
+      }
+      .replyContent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 24px;
+        img {
+          width: 100px;
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+}

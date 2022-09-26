@@ -40,6 +40,8 @@ li {
 
 .ant-layout-content {
   margin: 24px 64px 96px 0;
+  max-width: 1600px;
+  min-width: 720px;
 }
 
 .ant-pro-sider.ant-layout-sider.ant-pro-sider-fixed {
@@ -48,11 +50,16 @@ li {
   background: #f0f2f5;
 }
 
+.ant-pro-sider.ant-layout-sider-collapsed .ant-pro-sider-logo {
+  padding-left: 0 !important;
+}
+
 .ant-pro-sider-logo {
   background-color: #fff;
   padding-bottom: 0;
   padding-top: 0;
   height: 64px;
+  padding-left: 48px !important;
 
   img {
     width: 100%;
@@ -99,8 +106,12 @@ li {
   background: transparent !important;
   user-select: none;
 
+  .ant-pro-menu-item {
+    color: @red;
+  }
+
   .ant-pro-menu-item-title {
-    color: rgb(255, 94, 94) !important;
+    color: @red  !important;
     font-weight: bold;
   }
 }
@@ -117,7 +128,8 @@ li {
   line-height: 44px;
   font-size: 18px;
   font-weight: 400;
-  text-align: center;
+  text-align: left;
+  padding-left: 48px !important;
 
   &:hover {
     background-color: rgba(0, 0, 0, .03);
@@ -147,16 +159,15 @@ li {
 .ant-menu {
   padding-right: 24px;
 
+  .ant-menu-sub.ant-menu-inline>.ant-menu-item,
+  .ant-menu-sub.ant-menu-inline>.ant-menu-submenu>.ant-menu-submenu-title {
+    padding-left: 72px !important;
+  }
+
   .ant-menu-item {
     &:hover {
       background-color: rgba(0, 0, 0, .03) !important;
     }
-  }
-
-  .ant-menu-item-active {
-    // .ant-menu-title-content {
-    //   background-color: rgba(0, 0, 0, .03);
-    // }
   }
 }
 
@@ -176,4 +187,102 @@ li {
 .ant-menu-inline.ant-menu-root .ant-menu-item,
 .ant-menu-inline.ant-menu-root .ant-menu-submenu-title {
   padding-right: 50px;
+}
+
+
+/* 按钮 */
+.ant-btn-primary {
+  background-color: @red;
+  color: #fff;
+  border: none;
+
+  &:hover {
+    color: #fff;
+    background-color: @red;
+  }
+
+  &:focus {
+    color: #fff;
+    background-color: @red;
+  }
+}
+
+.ant-input {
+  &:hover {
+    border-color: @red;
+  }
+}
+
+/* tab */
+// :global {
+.ant-tabs-nav {
+  .ant-tabs-ink-bar {
+    background-color: @red;
+  }
+
+  .ant-tabs-tab-active {
+    color: #222;
+  }
+
+
+}
+
+/* color */
+.c1 {
+  color: #666
+}
+
+.c2 {
+  color: #999;
+}
+
+.c0 {
+  color: #222;
+}
+
+.cr {
+  color: @red;
+}
+
+.hover {
+  &:hover {
+    color: #999;
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  height: 6px;
+  border: 5px solid transparent;
+  background-clip: padding-box;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, .2);
+  box-shadow: inset -1px -1px 0 rgb(0 0 0 / 5%), inset 1px 1px 0 rgb(0 0 0 / 5%);
+}
+
+
+@media screen and (max-width: 1000px) {
+  .garrContainer {
+    padding: 0 32px;
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1679px) {
+  .garrContainer {
+    padding: 0 48px;
+  }
+}
+
+/* 页面container */
+.garrContainer {
+  position: relative;
+  min-height: calc(100vh - 220px);
+  padding: 0 48px;
+  margin: 0;
+  background-color: #fff;
+}
+
+:global {
+  .ant-pro-page-container-children-content {
+    margin-top: 0 !important;
+  }
 }

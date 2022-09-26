@@ -3,6 +3,9 @@ const ManageRoutes = {
   name: '管理',
   icon: 'BuildOutlined',
   component: '@/layouts/BasicLayout',
+  menu:{
+    defaultOpenAll:true,
+  },
   routes: [
     {
       path: '/manage/content',

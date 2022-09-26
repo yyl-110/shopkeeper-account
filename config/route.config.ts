@@ -54,6 +54,33 @@ export default [
   },
   { path: '/home', name: '主页', icon: 'HomeOutlined', component: '@/pages/Home' },
   ...routes,
+  { path: '/withdrawal', name: '提现', icon: 'PayCircleOutlined', component: '@/pages/Withdrawal' },
+  {
+    path: '/images',
+    name: '工具',
+    icon: 'ShoppingOutlined',
+    component: '@/layouts/BasicLayout',
+    routes: [
+      {
+        path: '/images',
+        name: '图片素材',
+        component: '@/pages/Tool',
+      },
+    ],
+  },
+  {
+    path: '/setting',
+    name: '设置',
+    icon: 'SettingOutlined',
+    component: '@/layouts/BasicLayout',
+    routes: [
+      {
+        path: '/setting',
+        name: '设置',
+        component: '@/pages/Setting',
+      },
+    ],
+  },
   {
     redirect: '/404',
   },

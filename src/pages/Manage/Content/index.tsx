@@ -1,12 +1,126 @@
 import React, { useEffect, useState } from 'react';
 import { connect, Dispatch, Loading, history } from 'umi';
+import { Tabs, Row, Col, DatePicker, Input, Pagination, Select } from 'antd';
+import styles from './index.less';
+import classnames from 'classnames';
+const { RangePicker } = DatePicker;
+const { Option } = Select;
+
+const room = require('@/assets/room.jpeg');
 
 interface IProps {
-dispatch: Dispatch;
-loading: Boolean | undefined;
+  dispatch: Dispatch;
+  loading: Boolean | undefined;
 }
-const Content: React.FC<IProps> = (props) => {
-    return <div>作品管理</div>;
+const Content: React.FC<IProps> = props => {
+  const tabList = ['状态', '全部', '已发布', '审核中', '未通过', '仅我可见'];
+  const [index, setIndex] = useState<number>(0);
+  return (
+    <div className={styles.content}>
+      <div className={styles.tabWrap}>
+        <Tabs defaultActiveKey="1">
+          <Tabs.TabPane tab="全部" key="1"></Tabs.TabPane>
+          <Tabs.TabPane tab="文章" key="2"></Tabs.TabPane>
+          <Tabs.TabPane tab="视频" key="3"></Tabs.TabPane>
+          <Tabs.TabPane tab="微头条" key="4"></Tabs.TabPane>
+          <Tabs.TabPane tab="问答" key="5"></Tabs.TabPane>
+        </Tabs>
+      </div>
+      <div className={styles.minTab}>
+        <Row>
+          <Col xs={24} lg={10}>
+            <div className={styles.minTabList}>
+              {tabList.map((i, inx) => {
+                return (
+                  <div
+                    className={classnames(styles.minTabItem, index === inx && styles.select)}
+                    key={inx.toString()}
+                    onClick={() => {
+                      setIndex(inx);
+                    }}
+                  >
+                    {i}
+                  </div>
+                );
+              })}
+            </div>
+          </Col>
+          <Col xs={24} lg={14}>
+            <Select defaultValue="all" style={{ width: 120, marginRight: '24px', marginBottom: '14px' }}>
+              <Option value="all">全部</Option>
+              <Option value="lucy">已发布</Option>
+              <Option value="in">审核中</Option>
+            </Select>
+            <RangePicker style={{ marginRight: '24px', marginBottom: '14px' }} />
+            <Input.Search allowClear style={{ width: '150px' }} defaultValue="" placeholder="搜索关键词" />
+          </Col>
+        </Row>
+        <div className={styles.list}>
+          <div className={styles.num}>共1,382条内容</div>
+          <div className={styles.item}>
+            <img src={room} alt="" />
+            <div className={styles.right}>
+              <div className={styles.title}>
+                <span className={styles.text}>闹钟定好，今晚8点哈哈哈哈哈哈哈哈</span>
+                <span className={styles.time}>05-19 0:48</span>
+              </div>
+              <div className={styles.tip}>已发布</div>
+              <div className={styles.bottom}>
+                <div className={styles.data}>展现595 · 阅读4万 · 点赞0 ·评论0</div>
+                <div className={styles.option}>
+                  <span>查看回答</span>
+                  <span>查看评论</span>
+                  <span>修改</span>
+                  <span>更多</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.item}>
+            <img src={room} alt="" />
+            <div className={styles.right}>
+              <div className={styles.title}>
+                <span className={styles.text}>闹钟定好，今晚8点哈哈哈哈哈哈哈哈</span>
+                <span className={styles.time}>05-19 0:48</span>
+              </div>
+              <div className={styles.tip}>已发布</div>
+              <div className={styles.bottom}>
+                <div className={styles.data}>展现595 · 阅读4万 · 点赞0 ·评论0</div>
+                <div className={styles.option}>
+                  <span>查看回答</span>
+                  <span>查看评论</span>
+                  <span>修改</span>
+                  <span>更多</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.item}>
+            <img src={room} alt="" />
+            <div className={styles.right}>
+              <div className={styles.title}>
+                <span className={styles.text}>闹钟定好，今晚8点哈哈哈哈哈哈哈哈</span>
+                <span className={styles.time}>05-19 0:48</span>
+              </div>
+              <div className={styles.tip}>已发布</div>
+              <div className={styles.bottom}>
+                <div className={styles.data}>展现595 · 阅读4万 · 点赞0 ·评论0</div>
+                <div className={styles.option}>
+                  <span>查看回答</span>
+                  <span>查看评论</span>
+                  <span>修改</span>
+                  <span>更多</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.page}>
+            <Pagination showSizeChanger defaultCurrent={3} total={500} />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Content;

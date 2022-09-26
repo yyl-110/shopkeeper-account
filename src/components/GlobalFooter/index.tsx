@@ -7,7 +7,7 @@ const GlobalFooter: React.FC<IProps> = props => {
   return (
     <div className={styles.footer}>
       <a target="_blank" rel="noopener noreferrer" className="sfoot_about" href="//web.toutiao.com/about/">
-        关于今日头条
+        关于掌柜
       </a>
       <span>|</span>
       <a

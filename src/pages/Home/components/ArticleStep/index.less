@@ -1,0 +1,75 @@
+:global {
+  .articleStep {
+    .ant-steps-item {
+      .ant-steps-icon-dot {
+        background-color: rgba(0, 0, 0, 0.25) !important;
+      }
+
+      .title {
+        color: #999;
+        font-size: 12px;
+      }
+
+      .content {
+        display: flex;
+        align-items: center;
+
+        .goods {
+          display: flex;
+          align-items: center;
+          flex: 1;
+          background-color: #faf3f3;
+          border-radius: 4px;
+          height: 50px;
+          padding: 0 14px 0 0;
+          flex-shrink: 0;
+          width: 50%;
+
+          img {
+            width: 50px;
+            height: 50px;
+          }
+
+          .text {
+            font-size: 12px;
+            color: #222;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            margin-left: 14px;
+
+          }
+        }
+
+        .data {
+          display: flex;
+          align-items: center;
+          flex: 1;
+          flex-shrink: 0;
+          justify-content: space-between;
+
+          li {
+            padding: 0 14px;
+            text-align: center;
+            flex-shrink: 0;
+
+            .num {
+              font-size: 24px;
+              white-space: nowrap;
+              font-family: byte bold;
+              font-weight: 600;
+              text-align: center;
+              color: #222;
+            }
+
+            span {
+              font-size: 12px;
+              color: #222;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,311 @@
+.creation {
+  background-color: #fff;
+  display: block;
+  min-height: 700px;
+  padding: 0 32px 64px;
+
+
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 26px 0 0;
+    line-height: 24px;
+    height: 72px;
+    font-size: 16px;
+    border-bottom: none;
+
+    .title {
+      height: 56px;
+      line-height: 56px;
+      color: #222;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+
+      >span {
+        display: flex;
+        align-items: center;
+        margin-left: 24px;
+        font-size: 14px;
+        color: #666;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .content {
+    margin-top: 70px;
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .primary {
+        font-size: 36px;
+        line-height: 54px;
+        color: #222;
+        text-align: center;
+        font-family: byte bold;
+        font-weight: 700;
+        margin-top: 8px;
+        margin-bottom: 0;
+
+        span {
+          display: inline-block;
+          margin-left: 4px;
+          font-weight: 400;
+          color: #666;
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+
+    .toView {
+      margin: 0 auto;
+      width: 80px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .apply {
+      color: @red;
+      text-align: center;
+      margin: 28px 0 40px;
+
+      :global {
+        .ant-btn {
+          color: @red;
+          border-color: @red;
+          border-radius: 4px;
+        }
+      }
+    }
+
+    .detail {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 24px;
+      margin-bottom: 16px;
+      font-size: 16px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 24px;
+      letter-spacing: normal;
+      color: #222;
+
+      .unit {
+        display: inline-block;
+        margin-left: 4px;
+        font-weight: 400;
+        color: #666;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .baseData {
+    .item {
+      height: 152px;
+      margin-top: 16px;
+      background: url('../../../assets/baseBg.png') no-repeat;
+      background-size: cover;
+      color: #666;
+      padding: 20px 16px 16px;
+      border-radius: 4px;
+      display: inline-block;
+      overflow: hidden;
+      cursor: pointer;
+      width: 100%;
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 28px;
+
+        .prefix {
+          display: flex;
+          align-items: center;
+        }
+
+        .name {
+          margin-left: 11px;
+          color: #222;
+          font-size: 16px;
+          line-height: 1.5;
+        }
+
+        .alreadyStatus {
+          display: inline-block;
+          border-radius: 2px;
+          width: 48px;
+          height: 18px;
+          margin-left: 9px;
+          border: 1px solid #4a4a5a;
+          font-size: 12px;
+          line-height: 16px;
+          text-align: center;
+          color: #222;
+        }
+      }
+
+      .description {
+        margin-top: 6px;
+        line-height: 24px;
+        font-size: 14px;
+        color: #666;
+        height: 48px;
+        overflow: hidden;
+
+        span {
+          word-break: break-all;
+        }
+      }
+    }
+  }
+
+  .infoData {
+    .item {
+      height: 152px;
+      margin-top: 16px;
+      padding: 20px 16px 16px;
+      border-radius: 4px;
+      display: inline-block;
+      overflow: hidden;
+      cursor: pointer;
+      width: 100%;
+      color: #999;
+      box-shadow: 0 0 5px 0 #c8c8c8 !important;
+      border-radius: 4px;
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 28px;
+
+        .prefix {
+          display: flex;
+          align-items: center;
+        }
+
+        .name {
+          margin-left: 11px;
+          color: #222;
+          font-size: 16px;
+          line-height: 1.5;
+        }
+
+        .alreadyStatus {
+          display: inline-block;
+          border-radius: 2px;
+          width: 48px;
+          height: 18px;
+          margin-left: 9px;
+          border: 1px solid #4a4a5a;
+          font-size: 12px;
+          line-height: 16px;
+          text-align: center;
+          color: #222;
+        }
+      }
+
+      .description {
+        margin-top: 6px;
+        line-height: 24px;
+        font-size: 14px;
+        color: #666;
+        height: 48px;
+        overflow: hidden;
+
+        span {
+          word-break: break-all;
+        }
+      }
+    }
+  }
+
+  .modalWrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1002;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .modalContent {
+      width: 432px;
+      height: 270px;
+      padding: 0;
+      background: transparent url('../../../assets/modalBg.png') no-repeat 50%;
+      background-size: contain;
+      box-shadow: none;
+      position: relative;
+
+      img {
+        position: absolute;
+        top: 9px;
+        left: 170px;
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+      }
+
+      .title {
+        position: absolute;
+        left: 90px;
+        bottom: 146px;
+        color: #444454;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 30px;
+      }
+
+      .intro {
+        position: absolute;
+        left: 74px;
+        bottom: 106px;
+        color: #444454;
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .join {
+        background: url('../../../assets/btnbg.png') no-repeat 50%;
+        background-size: contain;
+        display: inline-block;
+        position: absolute;
+        width: 120px;
+        height: 36px;
+        cursor: pointer;
+        color: #e4d4c5;
+        opacity: 1;
+        text-align: center;
+        line-height: 36px;
+        font-size: 16px;
+        font-weight: 500;
+        bottom: 38px;
+        left: 140px;
+      }
+    }
+  }
+}

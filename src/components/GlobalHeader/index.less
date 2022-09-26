@@ -1,10 +1,36 @@
 .rightContent {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  // justify-content: space-evenly;
   padding: 0 24px 0 10px;
   cursor: pointer;
   height: 64px;
+  justify-content: space-between;
+  background-color: #fff;
+
+  .info {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    justify-content: flex-end;
+  }
+
+  .goBack {
+    padding-left: 48px;
+    display: flex;
+    align-items: center;
+
+    .back {
+      display: flex;
+      align-content: center;
+      margin-left: 14px;
+      .backText {
+        color: #222;
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+  }
 
   .text {
     line-height: 64px;

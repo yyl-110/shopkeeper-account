@@ -1,0 +1,95 @@
+.setting {
+  padding-top: 13px !important;
+  padding-bottom: 48px !important;
+
+  .block {
+    padding-top: 16px;
+    display: flex;
+
+    .title {
+      flex: none;
+      margin-top: 22px;
+      width: 120px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #222;
+    }
+
+    .blockContainer {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      .blockItem {
+        padding: 24px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        line-height: 20px;
+        box-shadow: inset 0 -1px 0 #e8e8e8;
+
+        .label {
+          flex: none;
+          width: 142px;
+          display: flex;
+          align-items: center;
+        }
+
+        .content {
+          flex: 1;
+          color: #666;
+          display: flex;
+          justify-content: space-between;
+          word-break: break-all;
+
+          span {
+            color: #1356bd;
+
+
+            &.dis {
+              color: #bfbfbf;
+              ;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .settingBody {
+    padding: 32px 0 212px;
+
+    .showSetting {
+      border-bottom: 1px solid #e8e8e8;
+      padding-bottom: 48px;
+
+      .title {
+        font-size: 16px;
+        line-height: 24px;
+        color: #222;
+      }
+
+      .settingItem {
+        margin-top: 24px;
+        display: flex;
+        align-items: center;
+
+        .settingTop {
+          display: inline-block;
+          font-size: 14px;
+          line-height: 20px;
+          width: 180px;
+        }
+
+        .setContent {
+          font-size: 14px;
+          line-height: 20px;
+          display: flex;
+          align-items: center;
+          color: #666;
+        }
+      }
+    }
+  }
+}

@@ -51,9 +51,31 @@ const WorkCa: React.FC<IProps> = props => {
           })}
         </Row>
         <h2>认证特权</h2>
-        <div className={styles.privilege}></div>
+        <div className={styles.privilege}>
+          <div className={styles.icon}>
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIxIDE4Ljk5OTlDMjEgMTAuOTk5OSAzMyA5IDMzIDlDMzMgOSAzMyAxMi41MTYxIDMzIDE3QzMzIDI2LjAwMDEgMjEgMjggMjEgMjhDMjEgMjggMjEgMjUuMDk2NyAyMSAxOC45OTk5WiIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyKSIvPgo8cGF0aCBkPSJNMTkgMjEuOTk5OUMxOSAxMy45OTk5IDcgMTIgNyAxMkM3IDEyIDcgMTUuNTE2MSA3IDIwQzcgMjkuMDAwMSAxOSAzMSAxOSAzMUMxOSAzMSAxOSAyOC4wOTY3IDE5IDIxLjk5OTlaIiBmaWxsPSJ1cmwoI3BhaW50MV9saW5lYXIpIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXIiIHgxPSIzMyIgeTE9IjguOTk5OTQiIHgyPSIyMSIgeTI9IjI3Ljk5OTkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzM3REM2QiIvPgo8c3RvcCBvZmZzZXQ9IjAuNDM4MjY2IiBzdG9wLWNvbG9yPSIjNDFDQjZDIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzREQjY2RSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MV9saW5lYXIiIHgxPSI3IiB5MT0iMTEuOTk5OSIgeDI9IjE5IiB5Mj0iMzAuOTk5OSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjMzdEQzZCIi8+CjxzdG9wIG9mZnNldD0iMC40MzgyNjYiIHN0b3AtY29sb3I9IiM0MUNCNkMiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNERCNjZFIi8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPC9zdmc+Cg=="
+              alt=""
+            />
+          </div>
+          <div className={styles.wrapper}>
+            <div className={styles.title}>创作权益绿色通道</div>
+            <div className="c2 hover">直接开通百粉和千粉权益，提升变现能力</div>
+          </div>
+        </div>
         <h2>认证标准</h2>
-        <div className={styles.standard}></div>
+        <div className={styles.privilege}>
+          <div className={styles.icon}>
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIxIDE4Ljk5OTlDMjEgMTAuOTk5OSAzMyA5IDMzIDlDMzMgOSAzMyAxMi41MTYxIDMzIDE3QzMzIDI2LjAwMDEgMjEgMjggMjEgMjhDMjEgMjggMjEgMjUuMDk2NyAyMSAxOC45OTk5WiIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyKSIvPgo8cGF0aCBkPSJNMTkgMjEuOTk5OUMxOSAxMy45OTk5IDcgMTIgNyAxMkM3IDEyIDcgMTUuNTE2MSA3IDIwQzcgMjkuMDAwMSAxOSAzMSAxOSAzMUMxOSAzMSAxOSAyOC4wOTY3IDE5IDIxLjk5OTlaIiBmaWxsPSJ1cmwoI3BhaW50MV9saW5lYXIpIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXIiIHgxPSIzMyIgeTE9IjguOTk5OTQiIHgyPSIyMSIgeTI9IjI3Ljk5OTkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzM3REM2QiIvPgo8c3RvcCBvZmZzZXQ9IjAuNDM4MjY2IiBzdG9wLWNvbG9yPSIjNDFDQjZDIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzREQjY2RSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MV9saW5lYXIiIHgxPSI3IiB5MT0iMTEuOTk5OSIgeDI9IjE5IiB5Mj0iMzAuOTk5OSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjMzdEQzZCIi8+CjxzdG9wIG9mZnNldD0iMC40MzgyNjYiIHN0b3AtY29sb3I9IiM0MUNCNkMiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNERCNjZFIi8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPC9zdmc+Cg=="
+              alt=""
+            />
+          </div>
+          <div className={styles.wrapper}>
+            <div className={styles.title}>创作权益绿色通道</div>
+            <div className="c2 hover">直接开通百粉和千粉权益，提升变现能力</div>
+          </div>
+        </div>
       </div>
     </div>
   );

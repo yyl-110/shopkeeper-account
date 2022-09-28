@@ -10,7 +10,7 @@ export default defineConfig({
   routes,
   locale: {
     default: 'zh-CN',
-    antd: true,
+    antd: false,
   },
   dva: {
     immer: true,

@@ -16,8 +16,8 @@ const ColItem: React.FC<IProps> = props => {
               <span className={styles.title}>
                 <svg width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M7.001.314c-1.8 0-3.12 1.696-2.677 3.441l.48 1.89a2.57 2.57 0 001.904 1.87c.193.045.393.045.586 0a2.57 2.57 0 001.905-1.87l.479-1.89A2.762 2.762 0 007.001.315zm-.502 7.56c.324-.047.654-.047.978 0l.964.139c1.402.201 2.802.702 4.204 1.496a1.444 1.444 0 01.732 1.254v1.635a.783.783 0 01-.635.77c-1.914.381-3.827.571-5.741.571-1.914 0-3.827-.19-5.74-.57a.788.788 0 01-.636-.771v-1.635a1.438 1.438 0 01.732-1.254C2.76 8.715 4.16 8.214 5.561 8.01l.938-.137z"
                     fill="url(#fans-icon_svg__paint0_linear)"
                   ></path>
@@ -30,8 +30,8 @@ const ColItem: React.FC<IProps> = props => {
                       y2="16.236"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stop-color="#FF8585"></stop>
-                      <stop offset="1" stop-color="#FF5E5E"></stop>
+                      <stop stopColor="#FF8585"></stop>
+                      <stop offset="1" stopColor="#FF5E5E"></stop>
                     </linearGradient>
                   </defs>
                 </svg>
@@ -79,8 +79,8 @@ const ColItem: React.FC<IProps> = props => {
                       y2="15.503"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stop-color="#599AFF"></stop>
-                      <stop offset="1" stop-color="#3D89FF"></stop>
+                      <stop stopColor="#599AFF"></stop>
+                      <stop offset="1" stopColor="#3D89FF"></stop>
                     </linearGradient>
                   </defs>
                 </svg>
@@ -102,8 +102,8 @@ const ColItem: React.FC<IProps> = props => {
                 <svg width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="7" cy="7.001" r="6.825" fill="url(#benefit-icon_svg__paint0_linear)"></circle>
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M5.243 3.98a.391.391 0 01.553 0L6.997 5.18 8.2 3.98a.391.391 0 11.553.553L7.47 5.814h1.64a.391.391 0 110 .782H7.39v1.017h1.72a.391.391 0 010 .782H7.39v1.642a.39.39 0 01-.781 0V8.395h-1.72a.391.391 0 010-.782h1.72V6.596h-1.72a.391.391 0 010-.782h1.636L5.243 4.533a.391.391 0 010-.553z"
                     fill="#fff"
                   ></path>
@@ -120,8 +120,8 @@ const ColItem: React.FC<IProps> = props => {
                       y2="16.678"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stop-color="#FFD05E"></stop>
-                      <stop offset="1" stop-color="#FFC740"></stop>
+                      <stop stopColor="#FFD05E"></stop>
+                      <stop offset="1" stopColor="#FFC740"></stop>
                     </linearGradient>
                   </defs>
                 </svg>
@@ -129,8 +129,8 @@ const ColItem: React.FC<IProps> = props => {
                 <div className="visible-btn" style={{ height: '14px' }}>
                   <svg width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                      fillRule="evenodd"
+                      clipRule="evenodd"
                       d="M6.992 10.79c1.888 0 3.637-1.2 5.259-3.798-1.58-2.589-3.325-3.784-5.26-3.784-1.933 0-3.672 1.195-5.24 3.784C3.36 9.59 5.102 10.79 6.99 10.79zM6.99 2.042c2.345 0 4.364 1.434 6.057 4.302l.103.177.109.194a.583.583 0 01-.003.571l-.117.202c-1.754 2.98-3.804 4.47-6.15 4.47-2.3 0-4.31-1.432-6.03-4.299l-.083-.14a14.335 14.335 0 01-.104-.179l-.031-.055a.583.583 0 01-.003-.568l.098-.177.053-.093c1.693-2.937 3.727-4.405 6.1-4.405zM7 4.666a2.333 2.333 0 100 4.667 2.333 2.333 0 000-4.667zm0 1.167a1.167 1.167 0 110 2.333 1.167 1.167 0 010-2.333z"
                       fill="currentColor"
                     ></path>

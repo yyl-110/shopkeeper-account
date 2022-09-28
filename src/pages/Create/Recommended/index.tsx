@@ -2,16 +2,19 @@ import React, { useEffect, useState } from 'react';
 import { connect, Dispatch, Loading, history } from 'umi';
 import styles from './index.less';
 import { RightContent } from '@/components/GlobalHeader';
-import { Tabs, Input, Button } from 'antd';
+import { Tabs, Input, Button, Modal, Upload } from 'antd';
 import classnames from 'classnames';
 import { PlusOutlined, SearchOutlined, StarOutlined } from '@ant-design/icons';
 import { useRef } from 'react';
+import { TextArea } from 'antd/lib/input/TextArea';
+import { RcFile } from 'antd/lib/upload';
 
 interface IProps {}
 const Recommended: React.FC<IProps> = props => {
   const [tagInx, setTagInx] = useState<number>(0);
   const [showInput, setShowInput] = useState<boolean>(false);
   const inputRef = useRef(null);
+  const [isModalOpen, setModalOpen] = useState(false);
   const data = [
     {
       title: '外国的疫情真有那么严重吗？',
@@ -39,6 +42,21 @@ const Recommended: React.FC<IProps> = props => {
     },
   ];
   const tag = ['全部推荐', 'F1', '篮球'];
+
+  const onPreview = async file => {
+    let src = file.url as string;
+    if (!src) {
+      src = await new Promise(resolve => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file.originFileObj as RcFile);
+        reader.onload = () => resolve(reader.result as string);
+      });
+    }
+    const image = new Image();
+    image.src = src;
+    const imgWindow = window.open(src);
+    imgWindow?.document.write(image.outerHTML);
+  };
   return (
     <div className={classnames(styles.recommended)}>
       <RightContent showText={false} backText="发布问答" />
@@ -54,7 +72,14 @@ const Recommended: React.FC<IProps> = props => {
             </Tabs>
             <div className={styles.search}>
               <Input placeholder="搜索你感兴趣的问题" suffix={<SearchOutlined color="red" />} />
-              <Button type="primary">提问</Button>
+              <Button
+                type="primary"
+                onClick={() => {
+                  setModalOpen(true);
+                }}
+              >
+                提问
+              </Button>
             </div>
           </div>
           <div className={styles.recommendedPage}>
@@ -130,6 +155,25 @@ const Recommended: React.FC<IProps> = props => {
           </div>
         </div>
       </div>
+      <Modal title="提问" open={isModalOpen} cancelText="存草稿" okText="提问" wrapClassName="inputModal" width={752}>
+        <div className="inputWrap">
+          <Input placeholder="请输入问题（5～30字）"></Input>
+        </div>
+        <div className="descWrap">
+          <Input.TextArea placeholder="请输入描述（选填）" />
+        </div>
+        <div className="uploadImg">
+          <Upload
+            action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+            listType="picture-card"
+            fileList={[]}
+            onChange={() => {}}
+            onPreview={onPreview}
+          >
+            <PlusOutlined />
+          </Upload>
+        </div>
+      </Modal>
     </div>
   );
 };

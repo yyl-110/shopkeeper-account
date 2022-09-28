@@ -178,3 +178,56 @@
     }
   }
 }
+
+:global {
+  .inputModal {
+    .inputWrap {
+      display: flex;
+      position: relative;
+      border-bottom: 1px solid #e8e8e8;
+
+      .ant-input {
+        border: none;
+        height: 68px;
+        flex: 1;
+        max-height: 140px;
+        padding: 16px 0;
+        line-height: 36px;
+        display: block;
+        color: #222;
+        border: none;
+        font-size: 24px;
+        font-weight: 700;
+        word-break: break-all;
+
+        :focus {
+          border: none;
+          box-shadow: none;
+        }
+      }
+    }
+
+    .descWrap {
+      flex: 1;
+      margin: 16px 0 0;
+      border: none;
+      padding: 0;
+      font-size: 16px;
+
+      .ant-input {
+        border: none;
+        height: 200px;
+
+        &:focus {
+          border: none;
+          box-shadow: none;
+        }
+      }
+    }
+
+    .uploadImg {
+      margin-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+}

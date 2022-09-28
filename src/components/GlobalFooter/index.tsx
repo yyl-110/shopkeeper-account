@@ -6,7 +6,7 @@ interface IProps {}
 const GlobalFooter: React.FC<IProps> = props => {
   return (
     <div className={styles.footer}>
-      <a target="_blank" rel="noopener noreferrer" className="sfoot_about" href="//web.toutiao.com/about/">
+      <a rel="noopener noreferrer" className="sfoot_about" href="/about">
         关于掌柜
       </a>
       <span>|</span>

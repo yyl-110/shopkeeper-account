@@ -17,9 +17,9 @@ const EarningsData: React.FC<IProps> = props => {
           <Tabs.TabPane tab="整体收益" key="1">
             <All />
           </Tabs.TabPane>
-          <Tabs.TabPane tab="创作收益" key="2">
+          {/* <Tabs.TabPane tab="创作收益" key="2">
             创作
-          </Tabs.TabPane>
+          </Tabs.TabPane> */}
         </Tabs>
         <span className={styles.setting}>
           <SettingOutlined style={{ marginRight: '4px' }} />

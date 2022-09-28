@@ -1,4 +1,5 @@
 const path = require('path');
+import { MenuDataItem } from '@umijs/route-utils';
 const fs = require('fs');
 
 /**
@@ -52,9 +53,91 @@ export default [
     path: '/',
     redirect: '/home',
   },
+  { path: '/about', component: '@/pages/Common/About', layout: false },
+  { path: '/notice', component: '@/pages/Common/NoticeCenter', layout: false },
   { path: '/home', name: '主页', icon: 'HomeOutlined', component: '@/pages/Home' },
+  {
+    path: '/create',
+    name: '创作',
+    icon: 'EditOutlined',
+    component: '@/layouts/BasicLayout',
+    layout: false,
+    routes: [
+      {
+        path: '/create/article',
+        name: '文章',
+        component: '@/pages/Create/CreateArticle',
+      },
+      {
+        path: '/create/recommended',
+        name: '问答',
+        component: '@/pages/Create/Recommended',
+      },
+      {
+        redirect: '/404',
+      },
+    ],
+  },
+  {
+    path: '/manage',
+    name: '管理',
+    icon: 'BuildOutlined',
+    component: '@/layouts/BasicLayout',
+    menu: {
+      defaultOpenAll: true,
+    },
+    routes: [
+      {
+        path: '/manage/content',
+        name: '作品管理',
+        component: '@/pages/Manage/Content',
+      },
+      {
+        path: '/manage/comment',
+        name: '评论管理',
+        component: '@/pages/Manage/Comments',
+      },
+      {
+        redirect: '/404',
+      },
+    ],
+  },
   ...routes,
   { path: '/withdrawal', name: '提现', icon: 'PayCircleOutlined', component: '@/pages/Withdrawal' },
+  {
+    path: '/plan',
+    name: '成长指南',
+    icon: 'EuroCircleOutlined',
+    component: '@/layouts/BasicLayout',
+    defaultCollapsed: true,
+    routes: [
+      {
+        path: '/plan/creation',
+        name: '创作权益',
+        component: '@/pages/CreatorPlan/Creation',
+      },
+      {
+        path: '/plan/ca',
+        name: '掌柜认证',
+        hideChildrenInMenu: true,
+        routes: [
+          {
+            path: '/plan/ca',
+            name: '掌柜认证',
+            component: '@/pages/CreatorPlan/Certification',
+          },
+          {
+            name: '职业认证',
+            path: '/plan/ca/work',
+            component: '@/pages/CreatorPlan/WorkCa',
+          },
+        ],
+      },
+      {
+        redirect: '/404',
+      },
+    ],
+  },
   {
     path: '/images',
     name: '工具',
@@ -73,6 +156,9 @@ export default [
     name: '设置',
     icon: 'SettingOutlined',
     component: '@/layouts/BasicLayout',
+    defaultCollapsed: false,
+    breakpoint: true,
+    collapsed: false,
     routes: [
       {
         path: '/setting',

@@ -155,7 +155,17 @@ const Recommended: React.FC<IProps> = props => {
           </div>
         </div>
       </div>
-      <Modal title="提问" open={isModalOpen} cancelText="存草稿" okText="提问" wrapClassName="inputModal" width={752}>
+      <Modal
+        title="提问"
+        open={isModalOpen}
+        cancelText="存草稿"
+        okText="提问"
+        wrapClassName="inputModal"
+        width={752}
+        onCancel={() => {
+          setModalOpen(false);
+        }}
+      >
         <div className="inputWrap">
           <Input placeholder="请输入问题（5～30字）"></Input>
         </div>

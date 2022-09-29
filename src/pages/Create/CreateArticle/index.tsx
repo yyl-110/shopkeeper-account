@@ -70,7 +70,9 @@ const CreateArticle: React.FC<IProps> = props => {
       <RightContent showText={false} backText="发布文章" />
       <div className={styles.content}>
         <div className={styles.inputWrap}>
-          <Input placeholder="请输入问题（5～30字）"></Input>
+          <div className={styles.border}>
+            <Input placeholder="请输入文章标题（2～30个字）"></Input>
+          </div>
         </div>
         <div className={styles.editorWrap}>
           <BraftEditor

@@ -1,0 +1,241 @@
+.workData {
+  padding-top: 12px !important;
+  height: 300vh;
+
+  .workContent {
+    padding-top: 16px;
+
+    .hxData {
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      padding-bottom: 64px;
+
+      >.title {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+
+        .hint {
+          margin-left: 16px;
+          color: #999;
+          font-size: 14px;
+
+        }
+      }
+
+      .boardContainer {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin: 24px -12px 0;
+
+        .colItem {
+          flex-shrink: 0;
+          padding: 28px 0 9px;
+          padding-left: 28px;
+          padding-right: 28px;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+
+          .title {
+            color: #666;
+            font-size: 14px;
+            text-align: center;
+            line-height: 20px;
+            display: flex;
+            align-items: center;
+            line-height: 16px;
+
+            span {
+              line-height: 20px;
+              margin-left: 4px;
+              color: #999;
+            }
+          }
+
+          .primary {
+            a {
+              margin-top: 8px;
+              font-family: byte bold;
+              font-size: 32px;
+              line-height: 48px;
+              font-weight: 700;
+              text-align: center;
+              color: #222;
+            }
+          }
+        }
+      }
+    }
+
+    .lsfx {
+      .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 8px;
+
+        span {
+          font-size: 16px;
+          font-weight: 500;
+          color: #222;
+        }
+
+        .time {
+          display: flex;
+          align-items: center;
+
+          .list {
+            display: flex;
+            align-items: center;
+
+            .date {
+              color: #222;
+              font-weight: 400;
+
+              &.select {
+                color: @red;
+              }
+            }
+
+            .timeText {
+              font-weight: 400;
+              color: #999;
+            }
+
+            span {
+              background-color: #fff;
+              border: none;
+              color: #222;
+              font-size: 14px;
+              padding: 0 12px;
+              flex-shrink: 0;
+            }
+          }
+        }
+      }
+
+      .qushi {
+        padding: 20px;
+        border: 1px solid #e8e8e8;
+        border-radius: 4px;
+
+        .header {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 16px;
+
+          >span {
+            line-height: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #222;
+          }
+        }
+      }
+    }
+
+    .sexDis {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 24px;
+      border: 1px solid #e8e8e8;
+      border-radius: 4px;
+      height: 405px;
+
+      .chart {
+        width: 100%;
+        flex: 1;
+      }
+
+      .header {
+        margin: 20px;
+        line-height: 18px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #222;
+      }
+    }
+  }
+
+  :global {
+    .ant-tabs-tab-btn {
+      font-size: 16px !important;
+    }
+
+    .ant-tabs-nav {
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .tabWrap {
+    // position: fixed !important;
+    // top: 88px;
+
+    .miniTab {
+      padding-top: 32px;
+      padding-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 730px;
+
+      .list {
+        display: flex;
+        align-items: center;
+
+        .item {
+          font-size: 14px;
+          flex-shrink: 0;
+
+          &.select {
+            border-color: @red;
+            border-radius: 26px;
+            padding: 3px 11px;
+            color: @red;
+          }
+
+          &:not(:first-child) {
+            margin: 0 0 0 12px;
+
+          }
+
+          height: auto;
+          line-height: 20px;
+          border: 1px solid transparent;
+          border-radius: 26px;
+          padding: 3px 11px;
+        }
+      }
+    }
+  }
+
+  .workContent {
+    height: 800px;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  .miniTab {
+    width: 640px !important;
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1679px) {
+  .miniTab {
+    width: 770 !important;
+  }
+}
+
+@media screen and (min-width: 1679px) and (max-width: 1920px) {
+  .miniTab {
+    width: 770 !important;
+  }
+}

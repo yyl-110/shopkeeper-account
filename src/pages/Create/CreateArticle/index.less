@@ -75,13 +75,23 @@
   .inputWrap {
     display: flex;
     position: relative;
-    border-bottom: 1px solid #e8e8e8;
     padding: 0 64px;
-    position: relative;
     z-index: 3;
     padding-top: 32px;
 
+    .border {
+      width: 100%;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
     :global {
+
+      .ant-input:focus,
+      .ant-input-focused {
+        border: none;
+        box-shadow: none !important;
+      }
+
       .ant-input {
         border: none;
         height: 68px;
@@ -92,13 +102,20 @@
         display: block;
         color: #222;
         border: none;
-        font-size: 24px;
-        font-weight: 700;
+        font-weight: 600;
         word-break: break-all;
+        min-height: 36px;
+        font-size: 23px;
+        background-color: transparent;
+
+        &::placeholder {
+          color: #ac8c8c;
+          font-weight: 400 !important;
+        }
 
         :focus {
           border: none;
-          box-shadow: none;
+          box-shadow: none !important;
         }
       }
     }
@@ -116,6 +133,15 @@
       z-index: 99;
       display: flex;
       justify-content: center;
+    }
+
+    .ProseMirror {
+      p {
+        font-size: 17px;
+        line-height: 30px;
+        margin: 20px 0;
+        text-align: justify;
+      }
     }
 
     .bf-content {

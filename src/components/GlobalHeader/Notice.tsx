@@ -5,39 +5,74 @@ import { Dropdown, Menu } from 'antd';
 import { SmileOutlined } from '@ant-design/icons';
 interface IProps {}
 const Notice: React.FC<IProps> = props => {
+  const numStyle = {
+    width: '18px',
+    height: '18px',
+    borderRadius: '50%',
+    color: '#fff',
+    fontSize: '12px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    background: '#ff5e5e',
+  };
   const menu = (
     <Menu
       items={[
         {
           key: '1',
           label: (
-            <a rel="noopener noreferrer" href="/notice">
-              系统消息
-            </a>
+            <div style={{ width: '90px' }}>
+              <a
+                rel="noopener noreferrer"
+                href="/notice"
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', color: '#222' }}
+              >
+                系统消息 <span style={numStyle}>2</span>
+              </a>
+            </div>
           ),
         },
         {
           key: '2',
           label: (
-            <a rel="noopener noreferrer" href="/notice">
-              评论
-            </a>
+            <div style={{ width: '90px' }}>
+              <a
+                rel="noopener noreferrer"
+                href="/notice"
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', color: '#222' }}
+              >
+                评论
+              </a>
+            </div>
           ),
         },
         {
           key: '3',
           label: (
-            <a rel="noopener noreferrer" href="/notice">
-              粉丝
-            </a>
+            <div style={{ width: '90px' }}>
+              <a
+                rel="noopener noreferrer"
+                href="/notice"
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', color: '#222' }}
+              >
+                粉丝
+              </a>
+            </div>
           ),
         },
         {
           key: '4',
           label: (
-            <a rel="noopener noreferrer" href="/notice">
-              点赞
-            </a>
+            <div style={{ width: '90px' }}>
+              <a
+                rel="noopener noreferrer"
+                href="/notice"
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', color: '#222' }}
+              >
+                点赞
+              </a>
+            </div>
           ),
         },
       ]}
@@ -55,6 +90,7 @@ const Notice: React.FC<IProps> = props => {
           ></path>
         </svg>
         消息
+        <div className={styles.noticeNum}>2</div>
       </div>
     </Dropdown>
   );

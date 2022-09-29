@@ -31,7 +31,7 @@
 
       .backText {
         color: #222;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: bold;
       }
     }
@@ -46,8 +46,10 @@
 }
 
 .menu {
+
   :global(.ant-dropdown-menu-item) {
     min-width: 160px;
+
   }
 }
 
@@ -104,6 +106,35 @@
   align-items: center;
   color: #222;
   font-size: 14px;
+  position: relative;
+  height: 100%;
+
+  .number {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: @red;
+  }
+
+  .noticeNum {
+    position: absolute;
+    right: -9px;
+    top: 12px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: @red;
+  }
 
   &:hover {
     color: #666;

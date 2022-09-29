@@ -14,9 +14,7 @@ const EarningsData: React.FC<IProps> = props => {
     <div className={styles.earnIngData}>
       <main>
         <Tabs defaultActiveKey="1">
-          <Tabs.TabPane tab="整体收益" key="1">
-            <All />
-          </Tabs.TabPane>
+          <Tabs.TabPane tab="整体收益" key="1"></Tabs.TabPane>
           {/* <Tabs.TabPane tab="创作收益" key="2">
             创作
           </Tabs.TabPane> */}
@@ -26,6 +24,7 @@ const EarningsData: React.FC<IProps> = props => {
           收益设置
         </span>
       </main>
+      <All />
     </div>
   );
 };

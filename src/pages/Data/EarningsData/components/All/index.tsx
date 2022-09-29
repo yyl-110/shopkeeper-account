@@ -10,54 +10,49 @@ const { RangePicker } = DatePicker;
 
 interface IProps {}
 const All: React.FC<IProps> = props => {
-  const [size, setSize] = useState('middle');
+  const [size, setSize] = useState('small');
   const [select, setSelect] = useState<number>(0);
   const date = ['7天', '14天', '30天'];
   const chatDom = useRef(null);
   const chatData = [
     {
-      year: '1991',
-      value: 3,
+      year: '2022-09-02',
+      value: 0,
     },
     {
-      year: '1992',
-      value: 4,
+      year: '2022-09-03',
+      value: 0,
     },
     {
-      year: '1993',
-      value: 3.5,
+      year: '2022-09-04',
+      value: 0,
     },
     {
-      year: '1994',
+      year: '2022-09-05',
       value: 5,
     },
     {
-      year: '1995',
+      year: '2022-09-06',
       value: 4.9,
     },
     {
-      year: '1996',
+      year: '2022-09-07',
       value: 6,
     },
-    {
-      year: '1997',
-      value: 7,
-    },
-    {
-      year: '1998',
-      value: 9,
-    },
-    {
-      year: '1999',
-      value: 13,
-    },
+  ];
+
+  const tableData = [
+    { time: '2022-09-10', all: 10, earnings: 100, otherearnings: 1 },
+    { time: '2022-09-10', all: 10, earnings: 100, otherearnings: 1 },
+    { time: '2022-09-10', all: 10, earnings: 100, otherearnings: 1 },
   ];
 
   useEffect(() => {
     const chart = new Chart({
       container: 'container',
-      width: 700, // 指定图表宽度
-      height: 260, // 指定图表高度
+      forceFit: true,
+      height: 300, // 指定图表高度
+      padding: 'auto',
     });
     chart.source(chatData);
     chart.scale('value', {
@@ -66,47 +61,50 @@ const All: React.FC<IProps> = props => {
     chart.scale('year', {
       range: [0, 1],
     });
-    chart.tooltip({
-      crosshairs: {
-        type: 'line',
-      },
-    });
-    chart.line().position('year*value');
+    chart.tooltip(false);
+    chart
+      .line()
+      .position('year*value')
+      .color('#ff5e5e')
+      .shape('triangle');
     chart
       .point()
       .position('year*value')
-      .size(4)
+      .size(2)
       .shape('circle')
       .style({
-        stroke: '#fff',
-        lineWidth: 1,
+        stroke: '#ff5e5e',
+        lineWidth: 3,
       });
     chart.render();
+    const evt = document.createEvent('HTMLEvents');
+    evt.initEvent('resize', false, false);
+    window.dispatchEvent(evt);
   }, [chatDom]);
   const columns = [
     {
       title: '日期',
-      dataIndex: 'name',
-      key: 'name',
+      dataIndex: 'time',
+      key: 'time',
       width: 200,
       fixed: true,
     },
     {
       title: '总计',
-      dataIndex: 'age',
-      key: 'age',
+      dataIndex: 'all',
+      key: 'all',
       width: 200,
     },
     {
       title: '创作收益',
-      dataIndex: 'address',
-      key: 'address',
+      dataIndex: 'earnings',
+      key: 'earnings',
       width: 200,
     },
     {
       title: '其它收益',
-      key: 'tags',
-      dataIndex: 'tags',
+      key: 'otherearnings',
+      dataIndex: 'otherearnings',
       width: 200,
     },
   ];
@@ -232,7 +230,7 @@ const All: React.FC<IProps> = props => {
             <div id="container" ref={chatDom} style={{ display: size === 'small' ? '' : 'none' }}></div>
             <Table
               columns={columns}
-              dataSource={[]}
+              dataSource={tableData}
               scroll={{ y: 300, x: '100vw' }}
               style={{ display: size === 'middle' ? '' : 'none' }}
             />

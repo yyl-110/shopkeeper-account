@@ -1,6 +1,6 @@
 .workData {
   padding-top: 12px !important;
-  height: 300vh;
+  height: 320vh;
 
   .workContent {
     padding-top: 16px;
@@ -144,7 +144,49 @@
       margin-top: 24px;
       border: 1px solid #e8e8e8;
       border-radius: 4px;
-      height: 405px;
+      min-height: 405px;
+
+      &.mapContainer {
+        // height: 460px !important;
+        overflow: hidden;
+
+        .cityList {
+          overflow-y: auto;
+          flex: 1;
+          height: 460px !important;
+          padding-left: 12px;
+
+
+          &::-webkit-scrollbar {
+            display: none;
+          }
+
+          .cityItem {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+            white-space: nowrap;
+
+            .cityName {
+              display: inline-block;
+              min-width: 36px;
+              margin-right: 12px;
+              font-size: 12px;
+              line-height: 16px;
+              text-align: right;
+              color: #666;
+            }
+
+            .num {
+              display: inline-flex;
+              align-items: center;
+              font-size: 12px;
+              line-height: 16px;
+              color: #222;
+            }
+          }
+        }
+      }
 
       .chart {
         width: 100%;

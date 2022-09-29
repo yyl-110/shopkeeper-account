@@ -10,6 +10,7 @@ import LineChart from '../compoents/LineChart';
 import PieChart from '../compoents/PieChart';
 import PhoneLineChart from '../compoents/PhoneLineChart';
 import Map from '../compoents/Map/index';
+import ProvinceData from '../city';
 
 const { RangePicker } = DatePicker;
 interface IProps {
@@ -259,13 +260,28 @@ const FansData: React.FC<IProps> = props => {
             </Col>
           </Row>
 
-          <div className={styles.sexDis}>
+          <div className={classnames(styles.mapContainer, styles.sexDis)}>
             <div className={styles.header}>
               <span>地域分布</span>
             </div>
             <div className={styles.chart}>
-              地图
-              <Map />
+              <Row style={{ height: '100%', position: 'relative' }}>
+                <Col xs={24} sm={14} md={14} lg={14}>
+                  <Map />
+                </Col>
+                <Col xs={24} sm={10} md={10} lg={10} style={{ height: '100%' }}>
+                  <div className={styles.cityList}>
+                    {ProvinceData.map(i => {
+                      return (
+                        <div key={i.code} className={styles.cityItem}>
+                          <span className={styles.cityName}>{i.name}</span>
+                          <span className={styles.num}>0</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </Col>
+              </Row>
             </div>
           </div>
           <div className={styles.sexDis}>

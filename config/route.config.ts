@@ -55,6 +55,7 @@ export default [
   },
   { path: '/about', component: '@/pages/Common/About', layout: false },
   { path: '/notice', component: '@/pages/Common/NoticeCenter', layout: false },
+  { path: '/verify', component: '@/pages/Common/Verify',},
   { path: '/home', name: '主页', icon: 'HomeOutlined', component: '@/pages/Home' },
   {
     path: '/create',

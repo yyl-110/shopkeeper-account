@@ -13,7 +13,6 @@ export const layout = {
     ignoreFlatMenu: false,
     locale: false,
   },
-  pageTitleRender: () => <div>标题</div>,
   onError: (error: Error, info: any) => {
     console.error(error);
     console.info(info);

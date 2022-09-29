@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { connect, Dispatch, Loading, history } from 'umi';
-import { Tabs, Row, Col, DatePicker, Input, Pagination, Select } from 'antd';
+import { Tabs, Row, Col, DatePicker, Input, Pagination, Select, Dropdown, Menu } from 'antd';
 import styles from './index.less';
 import classnames from 'classnames';
 const { RangePicker } = DatePicker;
@@ -66,50 +66,43 @@ const Content: React.FC<IProps> = props => {
               </div>
               <div className={styles.tip}>已发布</div>
               <div className={styles.bottom}>
-                <div className={styles.data}>展现595 · 阅读4万 · 点赞0 ·评论0</div>
+                <div className={styles.data}>展现595&emsp;·&emsp;阅读4万&emsp;·&emsp;点赞0&emsp;·&emsp;评论0</div>
                 <div className={styles.option}>
                   <span>查看回答</span>
                   <span>查看评论</span>
                   <span>修改</span>
-                  <span>更多</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className={styles.item}>
-            <img src={room} alt="" />
-            <div className={styles.right}>
-              <div className={styles.title}>
-                <span className={styles.text}>闹钟定好，今晚8点哈哈哈哈哈哈哈哈</span>
-                <span className={styles.time}>05-19 0:48</span>
-              </div>
-              <div className={styles.tip}>已发布</div>
-              <div className={styles.bottom}>
-                <div className={styles.data}>展现595 · 阅读4万 · 点赞0 ·评论0</div>
-                <div className={styles.option}>
-                  <span>查看回答</span>
-                  <span>查看评论</span>
-                  <span>修改</span>
-                  <span>更多</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className={styles.item}>
-            <img src={room} alt="" />
-            <div className={styles.right}>
-              <div className={styles.title}>
-                <span className={styles.text}>闹钟定好，今晚8点哈哈哈哈哈哈哈哈</span>
-                <span className={styles.time}>05-19 0:48</span>
-              </div>
-              <div className={styles.tip}>已发布</div>
-              <div className={styles.bottom}>
-                <div className={styles.data}>展现595 · 阅读4万 · 点赞0 ·评论0</div>
-                <div className={styles.option}>
-                  <span>查看回答</span>
-                  <span>查看评论</span>
-                  <span>修改</span>
-                  <span>更多</span>
+                  <Dropdown
+                    placement="bottom"
+                    overlay={
+                      <Menu
+                        items={[
+                          {
+                            key: '1',
+                            label: <div style={{ width: '140px' }}>加入合集</div>,
+                          },
+                          {
+                            key: '2',
+                            label: <div>置顶</div>,
+                          },
+                          {
+                            key: '3',
+                            label: <div>分享</div>,
+                          },
+                          {
+                            key: '4',
+                            label: <div>设为仅我可见</div>,
+                          },
+                          {
+                            key: '5',
+                            label: <div>删除作品</div>,
+                          },
+                        ]}
+                      />
+                    }
+                    placement="top"
+                  >
+                    <span>更多</span>
+                  </Dropdown>
                 </div>
               </div>
             </div>

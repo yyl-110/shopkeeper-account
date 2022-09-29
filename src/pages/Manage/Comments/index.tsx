@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { connect, Dispatch, Loading, history } from 'umi';
-import { Tabs, Row, Col, Button } from 'antd';
+import { Tabs, Row, Col, Button, Dropdown, Menu, Modal, Radio } from 'antd';
 import styles from './index.less';
 import { EllipsisOutlined, LikeOutlined, MessageOutlined, VerticalAlignTopOutlined } from '@ant-design/icons';
 import classnames from 'classnames';
@@ -11,6 +11,7 @@ const Comment: React.FC<IProps> = props => {
   const data = [1, 2, 3, 4, 5, 6];
   const [select, setSelect] = useState<number>(0);
   const [comment, setComment] = useState<string>('');
+  const [modalOpen, setModalOpen] = useState(false);
   const commentItem = (i = 0, inx = 0, state = true) => {
     return (
       <div
@@ -39,7 +40,37 @@ const Comment: React.FC<IProps> = props => {
                 <VerticalAlignTopOutlined style={{ marginRight: '3px' }} />
                 置顶
               </span>
-              <EllipsisOutlined />
+              <Dropdown
+                overlay={
+                  <Menu
+                    items={[
+                      {
+                        key: '1',
+                        label: (
+                          <div
+                            onClick={() => {
+                              setModalOpen(true);
+                            }}
+                          >
+                            举报
+                          </div>
+                        ),
+                      },
+                      {
+                        key: '2',
+                        label: (
+                          <a rel="noopener noreferrer" href="#">
+                            删除
+                          </a>
+                        ),
+                      },
+                    ]}
+                  />
+                }
+                placement="top"
+              >
+                <EllipsisOutlined style={{ position: 'relative', zIndex: '99' }} />
+              </Dropdown>
             </div>
           </div>
         </div>
@@ -94,6 +125,25 @@ const Comment: React.FC<IProps> = props => {
           </Col>
         </Row>
       </div>
+
+      <Modal
+        title="举报"
+        open={modalOpen}
+        onCancel={() => {
+          setModalOpen(false);
+        }}
+      >
+        <div className={styles.modalWrap}>
+          <h2 style={{ marginBottom: '12px' }}>请选择举报原因</h2>
+          <div className="radioWrap">
+            <Radio>淫秽色情</Radio>
+            <Radio>营销广告</Radio>
+            <Radio>恶意谩骂</Radio>
+            <Radio>违法信息</Radio>
+            <Radio>我有话要说</Radio>
+          </div>
+        </div>
+      </Modal>
     </div>
   );
 };

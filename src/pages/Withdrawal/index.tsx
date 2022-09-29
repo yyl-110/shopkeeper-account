@@ -169,7 +169,9 @@ const Withdrawal: React.FC<IProps> = props => {
             </div>
             <h1 className="sec-title oversea">
               港澳台及海外作者认证
-              <a className="oversea-verify-entry">请点击这里完成实名认证</a>
+              <a className="oversea-verify-entry" href="/verify" style={{ color: '#1356bd' }}>
+                请点击这里完成实名认证
+              </a>
             </h1>
           </div>
         </div>

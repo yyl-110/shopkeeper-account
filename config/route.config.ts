@@ -51,11 +51,13 @@ export default [
   },
   {
     path: '/',
-    redirect: '/home',
+    redirect: '/shopkeeperhome',
   },
   { path: '/about', component: '@/pages/Common/About', layout: false },
   { path: '/notice', component: '@/pages/Common/NoticeCenter', layout: false },
-  { path: '/verify', component: '@/pages/Common/Verify',},
+  { path: '/verify', component: '@/pages/Common/Verify' },
+  { path: '/shopkeeperhome', component: '@/pages/ShopkeeperHome', layout: false },
+  { path: '/news', component: '@/pages/Article', layout: false }, // 新闻
   { path: '/home', name: '主页', icon: 'HomeOutlined', component: '@/pages/Home' },
   {
     path: '/create',

@@ -1,0 +1,43 @@
+.button:global(.ant-btn-ghost),
+.button[disabled],
+.button[disabled]:hover,
+.button[disabled]:focus {
+    background-color: transparent !important;
+}
+
+.button:global(:not(.ant-btn-primary)) {
+    padding: 0;
+
+    :global {
+        .anticon {
+            + span {
+                margin-left: 4px;
+            }
+        }
+        span {
+            + .anticon {
+                margin-left: 4px;
+            }
+        }
+    }
+}
+
+.button:not([disabled]):global(:not(.ant-btn-primary)),
+.button:focus:global(:not(.ant-btn-primary)) {
+    color: #595959;
+}
+
+.button:not([disabled]):global(:not(.ant-btn-primary)).active {
+    color: @primary-color;
+}
+
+.button:not([disabled]):global(:not(.ant-btn-primary)):hover {
+    background-image: none;
+    color: @primary-color;
+}
+
+.button[ant-click-animating-without-extra-node]:after {
+    border: 0 none;
+    opacity: 0;
+    animation: none 0 ease 0 1 normal;
+}

@@ -2,6 +2,60 @@
   padding-top: 12px !important;
   height: 320vh;
 
+  .fansList {
+    margin-top: 24px;
+
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 32px 0;
+      margin-bottom: 24px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all .3s;
+      border: 1px solid #e8e8e8;
+
+      &:hover {
+        box-shadow: 0 2px 25px rgba(0, 0, 0, .3);
+      }
+
+      img {
+        width: 80px;
+        height: 80px;
+        display: block;
+      }
+
+      .btnGroup {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 16px;
+
+        :global {
+          .ant-btn {
+            margin-right: 25px;
+          }
+        }
+      }
+
+      .userName {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 16px;
+        font-size: 16px;
+        color: #505050;
+        text-align: center;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
   .workContent {
     padding-top: 16px;
 
@@ -216,44 +270,41 @@
     }
   }
 
-  .tabWrap {
-    // position: fixed !important;
-    // top: 88px;
 
-    .miniTab {
-      padding-top: 32px;
-      padding-bottom: 8px;
+
+  .miniTab {
+    padding-top: 32px;
+    padding-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 730px;
+
+    .list {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      width: 730px;
 
-      .list {
-        display: flex;
-        align-items: center;
+      .item {
+        font-size: 14px;
+        flex-shrink: 0;
 
-        .item {
-          font-size: 14px;
-          flex-shrink: 0;
-
-          &.select {
-            border-color: @red;
-            border-radius: 26px;
-            padding: 3px 11px;
-            color: @red;
-          }
-
-          &:not(:first-child) {
-            margin: 0 0 0 12px;
-
-          }
-
-          height: auto;
-          line-height: 20px;
-          border: 1px solid transparent;
+        &.select {
+          border-color: @red;
           border-radius: 26px;
           padding: 3px 11px;
+          color: @red;
         }
+
+        &:not(:first-child) {
+          margin: 0 0 0 12px;
+
+        }
+
+        height: auto;
+        line-height: 20px;
+        border: 1px solid transparent;
+        border-radius: 26px;
+        padding: 3px 11px;
       }
     }
   }

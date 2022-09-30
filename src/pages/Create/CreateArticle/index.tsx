@@ -41,9 +41,6 @@ const CreateArticle: React.FC<IProps> = props => {
     //   alert(2);
     // };
     const handle = function(e) {
-      if (!document.getElementsByClassName('bf-controlbar')[0]) {
-        alert(1);
-      }
       if (e.target.scrollTop > 63) {
         try {
           document.getElementsByClassName('bf-controlbar')[0].style.position = 'fixed';

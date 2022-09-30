@@ -25,6 +25,7 @@ const Content: React.FC<IProps> = props => {
           <Tabs.TabPane tab="微头条" key="4"></Tabs.TabPane>
           <Tabs.TabPane tab="问答" key="5"></Tabs.TabPane>
         </Tabs>
+        <div className={styles.cg}>草稿箱（20）</div>
       </div>
       <div className={styles.minTab}>
         <Row>

@@ -1,0 +1,73 @@
+.user {
+    :global(.anticon),
+    :global(.ant-badge) {
+        font-size: 18px;
+        display: block;
+    }
+}
+
+.user-menu,
+.m-user-menu {
+    width: 162px;
+    font-size: 12px;
+
+    .info {
+        padding: 16px 12px 0;
+
+        .name {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: inline-block;
+            max-width: 88px;
+            font-weight: 700;
+            font-size: 16px;
+            display: block;
+        }
+    }
+}
+
+.user-avatar {
+    display: block;
+}
+
+.nav-burger {
+    width: auto !important;
+
+    :global {
+        .btn-burger {
+            .anticon-close {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.action-menu {
+    cursor: pointer;
+}
+
+.m-user-menu {
+    width: 100%;
+
+    .info {
+        margin-bottom: 16px;
+    }
+
+    :global {
+        .ant-menu {
+            border: 0 none;
+
+            .ant-menu-item-selected {
+                background: transparent;
+            }
+        }
+    }
+}
+
+.m-right-action {
+    font-size: 12px;
+    a {
+        color: #262626;
+    }
+}

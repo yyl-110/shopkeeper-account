@@ -8,25 +8,6 @@ export default defineConfig({
     API_BASE: 'prod',
   },
   chainWebpack(config) {
-    config.merge({
-      optimization: {
-        minimize: true,
-        splitChunks: {
-          chunks: 'async',
-          minSize: 30000,
-          minChunks: 1,
-          automaticNameDelimiter: '.',
-          cacheGroups: {
-            vendors: {
-              name: 'vendors',
-              chunks: 'all',
-              test: /[\\/]node_modules[\\/]/,
-              priority: -12,
-            },
-          },
-        },
-      },
-    });
     config.plugin('compression-webpack-plugin').use(
       new CompressionWebpackPlugin({
         // filename: 文件名称，这里我们不设置，让它保持和未压缩的文件同一个名称

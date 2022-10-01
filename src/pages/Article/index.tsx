@@ -90,6 +90,7 @@ const Article = function({ ...props }) {
                     </div>
                   </div>
                 </div>
+                <button className="check-more-reply">查看全部 2 条回复</button>
               </div>
             </div>
           </div>
@@ -146,6 +147,9 @@ const Article = function({ ...props }) {
             </div>
           </div>
         </div>
+        <button className="side-drawer-btn">
+          <span>查看全部 9 条评论</span>
+        </button>
       </div>
     );
   };
@@ -165,11 +169,7 @@ const Article = function({ ...props }) {
           content={intl.formatMessage({ id: 'description' })}
         /> */}
       </Helmet>
-      <div
-        className={classnames(styles['fix-header'], {
-          [styles['shadow']]: shadow,
-        })}
-      >
+      <div className={classnames(styles['fix-header'], styles.shadow)}>
         <Header {...props} navigation={<Navigation overlayStyle={overlayStyle} />} />
       </div>
       <div className={styles['article-detail-container']}>
@@ -208,6 +208,19 @@ const Article = function({ ...props }) {
           <div className="show-monitor">
             <div className="article-content">
               <h1>抽烟、喝酒的人，平时也爱喝茶会怎么样？茶叶能消除烟酒危害吗？</h1>
+              <div className="article-meta">
+                <span>2022-10-01 16:47</span>
+                <span className="dot">·</span>
+                <span className="name">
+                  <a
+                    href="/c/user/token/MS4wLjABAAAAaezOXkHVr0_i2JvWXprb4zLGpRInnKStptFm5WsXHKU/?source=tuwen_detail"
+                    target="_blank"
+                    rel="noopener nofollow"
+                  >
+                    央视网
+                  </a>
+                </span>
+              </div>
               <article dangerouslySetInnerHTML={{ __html: content }} />
               {commont()}
             </div>
@@ -215,7 +228,7 @@ const Article = function({ ...props }) {
         </div>
         <div className="right-sidebar">
           <Space direction="vertical" size="large">
-            <div className="user-info">
+            <div className="user-info2">
               <a aria-label="作者头像" className="user-avatar" target="_blank" rel="noopener nofollow">
                 <img src="https://p3.toutiaoimg.com/large/e580012c63017a4cdd3" alt="菱镜头 头像" />
               </a>

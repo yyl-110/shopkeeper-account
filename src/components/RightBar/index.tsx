@@ -34,7 +34,14 @@ const RightBar: React.FC<IProps> = props => {
           />
           反馈
         </li>
-        <li role="button" aria-label="回到顶部" className={classnames(styles.toolItem, styles.top)}>
+        <li
+          role="button"
+          aria-label="回到顶部"
+          className={classnames(styles.toolItem, styles.top)}
+          onClick={() => {
+            document.body.firstElementChild?.scrollTo(0, 0);
+          }}
+        >
           <img
             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAYBAMAAABglkJ9AAAAG1BMVEVHcEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABp4cHsAAAACHRSTlMAf2W/sEjnIC7DJE4AAABhSURBVBjTY2CgAQgxQhdh7OgQQBOS6OhoxFCErkwCJNSIoQhVmQREqBFDEbIyCZhQI4YihDIJhFAjhqKODgWwUAWyUCtYyAJZqAUs5IEs1AwW0kAWagILMZkhRJIVKAhyAIGxTPN/5SDhAAAAAElFTkSuQmCC"
             alt=""

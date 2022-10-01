@@ -9,7 +9,7 @@ export const layout = {
   footerRender: () => <GlobalFooter />,
   siderWidth: 256,
   menu: {
-    defaultOpenAll: true,
+    defaultOpenAll: false, // 是否展开侧边tab
     ignoreFlatMenu: false,
     locale: false,
   },

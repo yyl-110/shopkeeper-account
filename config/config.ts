@@ -48,4 +48,5 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
+  chunks: ['vendors', 'umi'],
 });

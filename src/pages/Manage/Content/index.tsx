@@ -100,7 +100,6 @@ const Content: React.FC<IProps> = props => {
                         ]}
                       />
                     }
-                    placement="top"
                   >
                     <span>更多</span>
                   </Dropdown>

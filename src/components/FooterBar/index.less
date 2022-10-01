@@ -1,0 +1,44 @@
+.footerBar {
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  z-index: 200;
+  min-width: 1280px;
+  width: 100%;
+  padding: 0 16px;
+
+  .wrap {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+
+  }
+
+  .left {
+    a {
+      display: inline-block;
+      font-size: 12px;
+      line-height: 16px;
+      color: #999;
+      padding: 12px 0;
+
+      &:not(:first-child) {
+        margin-left: 24px;
+      }
+    }
+  }
+
+  .right {
+    span {
+      display: inline-block;
+      font-size: 12px;
+      line-height: 16px;
+      color: #999;
+      padding: 12px 0;
+
+      &:not(:first-child) {
+        margin-left: 24px;
+      }
+    }
+  }
+}

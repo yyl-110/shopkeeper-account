@@ -1,0 +1,85 @@
+.rightBar {
+  position: fixed;
+  right: 24px;
+  bottom: 60px;
+  z-index: 200;
+
+  .toolContainer {
+    width: 40px;
+    padding: 0;
+
+    .toolItem {
+      padding: 33px 0 7px;
+      margin-top: 12px;
+      font-size: 12px;
+      line-height: 16px;
+      color: #000;
+      background-color: #fff;
+      border: 1px solid #e8e8e8;
+      border-radius: 6px;
+      text-align: center;
+      cursor: pointer;
+      transition: all .35s linear;
+      position: relative;
+
+      &:first-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
+
+        img {
+          width: 21px;
+          height: 21px;
+        }
+      }
+
+      &:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
+
+        img {
+          width: 21px;
+          height: 21px;
+        }
+      }
+
+      &:nth-child(4) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
+
+        img {
+          width: 21px;
+          height: 21px;
+        }
+      }
+
+      &:nth-child(3) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 12px;
+          height: 8px;
+          margin-bottom: 5px;
+        }
+      }
+
+      &.top {
+        width: 38px;
+        padding-top: 18px;
+        line-height: 14px;
+        position: absolute;
+      }
+    }
+  }
+}

@@ -26,16 +26,17 @@
     "test:coverage": "umi-test --coverage",
     "git-commit": "yarn lancet-commit",
     "pre-commit": "run-s prettier lint lint:fix",
-    "commit": "run-s prettier lint git-commit"
+    "commit": "run-s prettier lint git-commit",
+    "analyze": "cross-env ANALYZE=1 umi build"
   },
   "lint-staged": {
-		"*.{js,jsx,less,md,json}": [
-			"prettier --write"
-		],
-		"*.ts?(x)": [
-			"prettier --parser=typescript --write"
-		]
-	},
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
@@ -73,6 +74,7 @@
     "@types/react": "^17.0.2",
     "@umijs/plugin-esbuild": "^1.4.1",
     "@umijs/test": "^3.4.7",
+    "compression-webpack-plugin": "5.0.1",
     "cross-env": "^7.0.3",
     "husky": "^4.2.5",
     "lint-staged": "^13.0.3",

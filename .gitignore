@@ -21,3 +21,4 @@
 /src/.umi-test
 /.env.local
 /config/config.local.ts
+/.history

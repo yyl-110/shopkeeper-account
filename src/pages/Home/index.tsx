@@ -9,6 +9,7 @@ import Inspiration from './components/Inspiration/index';
 import Active from './components/Active/index';
 import Course from './components/Course/index';
 import GoodWorks from './components/GoodWorks';
+import ToolBar from '../../components/ToolBar/index';
 
 interface IProps {
   dispatch: Dispatch;
@@ -30,6 +31,7 @@ const Home: React.FC<IProps> = props => {
           <GoodWorks />
         </Col>
       </Row>
+      <ToolBar />
     </div>
   );
 };

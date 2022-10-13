@@ -14,11 +14,11 @@
       margin-bottom: 24px;
       border-radius: 4px;
       cursor: pointer;
-      transition: all .3s;
+      transition: all 0.3s;
       border: 1px solid #e8e8e8;
 
       &:hover {
-        box-shadow: 0 2px 25px rgba(0, 0, 0, .3);
+        box-shadow: 0 2px 25px rgba(0, 0, 0, 0.3);
       }
 
       img {
@@ -65,7 +65,7 @@
       width: 100%;
       padding-bottom: 64px;
 
-      >.title {
+      > .title {
         font-weight: 500;
         font-size: 16px;
         line-height: 24px;
@@ -74,7 +74,6 @@
           margin-left: 16px;
           color: #999;
           font-size: 14px;
-
         }
       }
 
@@ -181,7 +180,7 @@
           justify-content: space-between;
           margin-bottom: 16px;
 
-          >span {
+          > span {
             line-height: 20px;
             font-size: 14px;
             font-weight: 500;
@@ -209,7 +208,6 @@
           flex: 1;
           height: 460px !important;
           padding-left: 12px;
-
 
           &::-webkit-scrollbar {
             display: none;
@@ -263,14 +261,11 @@
     }
 
     .ant-tabs-nav {
-
       &::before {
         display: none;
       }
     }
   }
-
-
 
   .miniTab {
     padding-top: 32px;
@@ -297,7 +292,6 @@
 
         &:not(:first-child) {
           margin: 0 0 0 12px;
-
         }
 
         height: auto;
@@ -313,7 +307,6 @@
     height: 800px;
   }
 }
-
 
 @media screen and (max-width: 1000px) {
   .miniTab {

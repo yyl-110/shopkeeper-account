@@ -22,7 +22,7 @@ const GlobalModel: IGlobalModel = {
     setup({ history }) {
       history.listen(({ pathname }) => {
         if (pathname !== '/login' && !localStorage.getItem('userPhone')) {
-          history.push('/login')
+          history.push('/login');
         }
       });
     },

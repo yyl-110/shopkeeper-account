@@ -4,5 +4,5 @@ import { GithubOutlined } from '@ant-design/icons';
 import styles from './index.less';
 
 export default () => {
-    return <GithubOutlined className={classNames(styles['third-icon'], styles['github'])} />;
+  return <GithubOutlined className={classNames(styles['third-icon'], styles['github'])} />;
 };

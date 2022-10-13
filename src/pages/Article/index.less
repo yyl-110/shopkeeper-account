@@ -16,7 +16,7 @@
   width: 1130px;
   min-width: 1130px;
 
-  &>div {
+  & > div {
     display: inline-block;
     vertical-align: top;
   }
@@ -180,8 +180,6 @@
           margin-top: 24px;
           margin-bottom: 40px;
 
-
-
           .ttp-comment-input {
             flex: 1;
             position: relative;
@@ -206,9 +204,9 @@
               outline: none;
               resize: none;
               background: #f8f8f8;
-              -webkit-transition: height .3s ease-in-out;
-              -moz-transition: height .3s ease-in-out;
-              transition: height .3s ease-in-out;
+              -webkit-transition: height 0.3s ease-in-out;
+              -moz-transition: height 0.3s ease-in-out;
+              transition: height 0.3s ease-in-out;
             }
 
             .action {
@@ -224,19 +222,18 @@
                 line-height: 20px;
                 color: #fff;
                 background: #505050;
+                display: inline-block;
 
                 &.disabled {
-                  opacity: .3;
+                  opacity: 0.3;
                   cursor: default;
                 }
               }
             }
           }
-
         }
 
         .CommentList {
-
           .li {
             margin: 40px 0;
 
@@ -306,7 +303,7 @@
                   cursor: pointer;
 
                   &::before {
-                    content: "";
+                    content: '';
                     position: absolute;
                     top: 50%;
                     right: 0;
@@ -350,9 +347,6 @@
                       color: #999;
                     }
                   }
-
-
-
 
                   .ttp-comment-report {
                     display: inline-block;
@@ -435,7 +429,7 @@
           font-size: 16px;
           line-height: 24px;
           font-weight: 500;
-          letter-spacing: .02em;
+          letter-spacing: 0.02em;
           color: #222;
           margin: 8px 0 4px;
         }
@@ -469,6 +463,233 @@
           background: #f04142;
           cursor: pointer;
           justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+:global {
+  .drawerWrap {
+    .inputWrap {
+      position: relative;
+    }
+
+    .moreComment {
+      .commentList {
+        .side-drawer-btn {
+          display: block;
+          border: none;
+          margin-top: -4px;
+          padding: 11px 0;
+          border-radius: 4px;
+          width: 270px;
+          font-size: 16px;
+          line-height: 22px;
+          text-align: center;
+          color: #222;
+          background: #f8f8f8;
+          cursor: pointer;
+          margin-left: 60px;
+
+          span {
+            display: inline-block;
+            position: relative;
+            padding-right: 18px;
+
+            &::before {
+              content: '';
+              background-image: url('https://lf3-cdn2-tos.bytescm.com/toutiao/toutiao_web_pc/svgs/icon_right.3d90fb78.svg');
+              position: absolute;
+              top: 50%;
+              right: 0;
+              -webkit-transform: translateY(-50%);
+              -moz-transform: translateY(-50%);
+              transform: translateY(-50%) rotate(90deg);
+              margin-top: -1px;
+              width: 16px;
+              height: 16px;
+              background-size: contain;
+            }
+          }
+        }
+
+        .ttp-avatar {
+          box-sizing: border-box;
+          border: 1px solid #f2f2f2;
+          border-radius: 50%;
+          width: 36px;
+          height: 36px;
+          margin-right: 12px;
+          position: relative;
+          display: inline-block;
+
+          img {
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .li {
+          margin: 40px 0;
+
+          .ttp-comment-item {
+            display: flex;
+            align-items: flex-start;
+
+            .comment-info {
+              flex: 1;
+
+              .header {
+                display: flex;
+                justify-content: space-between;
+                height: 25px;
+
+                .user-info {
+                  a {
+                    color: #222;
+                    display: block;
+                  }
+                }
+
+                .user-name {
+                  display: flex;
+                  align-items: center;
+                }
+
+                .inner {
+                  position: relative;
+                  padding-right: 24px;
+                  font-size: 16px;
+                  line-height: 24px;
+                  color: #222;
+                  display: flex;
+                  align-items: center;
+
+                  .text {
+                    margin-top: 0;
+                    font-size: 14px;
+                  }
+                }
+              }
+
+              .body {
+                margin: 18px 0 12px;
+
+                .content {
+                  font-size: 16px;
+                  font-weight: 400;
+                  line-height: 24px;
+                  color: #222;
+                  word-break: break-all;
+                }
+              }
+
+              .check-more-reply {
+                display: inline-block;
+                position: relative;
+                border: none;
+                margin-top: 16px;
+                padding-right: 16px;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 20px;
+                color: #505050;
+                background: none;
+                cursor: pointer;
+
+                &::before {
+                  content: '';
+                  position: absolute;
+                  top: 50%;
+                  right: 0;
+                  transform: translateY(-50%) rotate(90deg);
+                  width: 16px;
+                  height: 16px;
+                  background-size: contain;
+                  background-image: url('https://lf3-cdn2-tos.bytescm.com/toutiao/toutiao_web_pc/svgs/icon_right.3d90fb78.svg');
+                }
+              }
+
+              .footer {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .left-action {
+                  font-size: 14px;
+                  line-height: 20px;
+                  display: flex;
+                  align-items: center;
+
+                  .reply-btn {
+                    border: none;
+                    border-radius: 34px;
+                    padding: 0;
+                    font-size: 14px;
+                    line-height: 20px;
+                    font-weight: 500;
+                    color: #222;
+                    background: none;
+                    cursor: pointer;
+                  }
+
+                  .dot {
+                    margin: 0 8px;
+                    color: #999;
+                  }
+
+                  .time {
+                    color: #999;
+                  }
+                }
+
+                .ttp-comment-report {
+                  display: inline-block;
+                  position: relative;
+                  vertical-align: middle;
+                  height: 20px;
+                  outline: none;
+                }
+              }
+            }
+
+            a {
+              margin-right: 12px;
+              color: #222;
+            }
+          }
+        }
+      }
+
+      textarea {
+        width: 100%;
+        height: 100px !important;
+      }
+
+      .action {
+        margin-top: 12px;
+
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+
+        .submit-btn {
+          border: none;
+          border-radius: 4px;
+          padding: 6px 18px;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 20px;
+          color: #fff;
+          background: #505050;
+
+          &.disabled {
+            opacity: 0.3;
+            cursor: default;
+          }
         }
       }
     }

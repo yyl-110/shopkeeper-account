@@ -6,7 +6,7 @@ import styles from './index.less';
 const { Search } = Input;
 function TopSearch({ defaultValue, type, ...props }) {
   const [word, setWord] = useState(defaultValue || '');
-  const onSearch = (value) => {
+  const onSearch = value => {
     if (props.onSearch) props.onSearch(value);
     if (value.trim() === '') return history.push('/');
     history.push(`/search?q=${value}${type ? `&t=${type}` : ''}`);
@@ -23,14 +23,14 @@ function TopSearch({ defaultValue, type, ...props }) {
         placeholder="搜索"
         size="large"
         value={word}
-        onChange={(e) => setWord(e.target.value)}
+        onChange={e => setWord(e.target.value)}
         onSearch={onSearch}
       />
     </div>
   );
 }
 
-TopSearch.getInitialProps = (ctx) => {
+TopSearch.getInitialProps = ctx => {
   console.log(ctx);
 };
 export default TopSearch;

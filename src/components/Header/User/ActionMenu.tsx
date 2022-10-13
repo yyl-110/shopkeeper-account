@@ -5,33 +5,28 @@ import { EditTwoTone, QuestionCircleTwoTone, PlusOutlined } from '@ant-design/ic
 import styles from './index.less';
 
 export default () => {
-    const menu = (
-        <Menu>
-            <Menu.Item key="question">
-                <Link to="/question/new">
-                    <QuestionCircleTwoTone />
-                    提问题
-                </Link>
-            </Menu.Item>
-            <Menu.Item key="article">
-                <Link to="/article/new">
-                    <EditTwoTone />
-                    写文章
-                </Link>
-            </Menu.Item>
-        </Menu>
-    );
+  const menu = (
+    <Menu>
+      <Menu.Item key="question">
+        <Link to="/question/new">
+          <QuestionCircleTwoTone />
+          提问题
+        </Link>
+      </Menu.Item>
+      <Menu.Item key="article">
+        <Link to="/article/new">
+          <EditTwoTone />
+          写文章
+        </Link>
+      </Menu.Item>
+    </Menu>
+  );
 
-    return (
-        <Popover
-            overlayClassName={'popover-menu'}
-            content={menu}
-            arrowPointAtCenter
-            placement="bottomRight"
-        >
-            <div className={styles['action-menu']}>
-                <PlusOutlined />
-            </div>
-        </Popover>
-    );
+  return (
+    <Popover overlayClassName={'popover-menu'} content={menu} arrowPointAtCenter placement="bottomRight">
+      <div className={styles['action-menu']}>
+        <PlusOutlined />
+      </div>
+    </Popover>
+  );
 };

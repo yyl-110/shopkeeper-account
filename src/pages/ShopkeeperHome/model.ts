@@ -10,7 +10,7 @@ export default {
       if (data && data.offset === payload.offset) return;
 
       const response = yield call(recommends, payload);
-      console.log('response:', response)
+      console.log('response:', response);
       if (response && response.result) {
         yield put({
           type: 'setRecommends',

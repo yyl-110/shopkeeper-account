@@ -96,7 +96,7 @@ export default ({ overlayStyle, ...props }) => {
               placement="bottom"
               visible={visible}
               overlayStyle={overlayStyle}
-              onVisibleChange={(newVisible) => {
+              onVisibleChange={newVisible => {
                 setVisible(newVisible);
               }}
               trigger="click"

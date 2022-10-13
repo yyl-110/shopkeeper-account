@@ -73,7 +73,7 @@ const ShopkeeperHome = function({ ...props }) {
   return (
     <>
       <Helmet encodeSpecialCharacters={false}>
-        <title>{`${settings && settings.site ? settings.site.name : '房掌柜'}`}</title>
+        <title>{`${settings && settings.site ? settings.site.name : '掌柜号'}`}</title>
         {/* <meta name="keywords" content={intl.formatMessage({ id: 'keywords' })} /> */}
         {/* <meta name="description" content={intl.formatMessage({ id: 'description' })} /> */}
       </Helmet>

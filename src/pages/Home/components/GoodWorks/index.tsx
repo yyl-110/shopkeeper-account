@@ -20,7 +20,9 @@ const GoodWorks: React.FC<IProps> = props => {
                 <div className={styles.item}>
                   <img src={videoImg} alt="" />
                   <div className={styles.content}>
-                    <div className={styles.videoTitle}>3分钟掌握如何发布图文内容3分钟掌握如何发布图文内容3分钟掌握如何发布图文内容3分钟掌握如何发布图文内容</div>
+                    <div className={styles.videoTitle}>
+                      3分钟掌握如何发布图文内容3分钟掌握如何发布图文内容3分钟掌握如何发布图文内容3分钟掌握如何发布图文内容
+                    </div>
                     <div className={styles.readNum}>
                       257.7万<span>人看过</span>
                     </div>
